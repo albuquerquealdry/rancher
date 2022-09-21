@@ -41,7 +41,7 @@ metadata:
 
 ---
 
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: cattle-admin-binding
@@ -62,12 +62,12 @@ roleRef:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: cattle-credentials-d7a3c23
+  name: cattle-credentials-ec80808
   namespace: cattle-system
 type: Opaque
 data:
   url: "aHR0cHM6Ly8xNzIuMjguMjAwLjE3NA=="
-  token: "bGRod3BudHFxZDZqa2s4cnN6N252em1mbXA1dzZ2ajJwbHhicDdmdzVyYjlkNHR4ZmpmYjQ5"
+  token: "aHprczR6Yzc0empjdHo0bGs1dGtnbWhsdHZtcXNuc2RoNzlkcG02NTY3NGJqbnEyZ2pwdHFr"
   namespace: ""
 
 ---
@@ -155,7 +155,7 @@ spec:
       volumes:
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-d7a3c23
+          secretName: cattle-credentials-ec80808
           defaultMode: 320
 
 ---
@@ -235,7 +235,7 @@ spec:
           type: DirectoryOrCreate
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-d7a3c23
+          secretName: cattle-credentials-ec80808
           defaultMode: 320
       - hostPath:
           path: /etc/docker/certs.d
