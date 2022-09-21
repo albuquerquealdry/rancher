@@ -62,12 +62,12 @@ roleRef:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: cattle-credentials-662dffa
+  name: cattle-credentials-d7a3c23
   namespace: cattle-system
 type: Opaque
 data:
   url: "aHR0cHM6Ly8xNzIuMjguMjAwLjE3NA=="
-  token: "cmpna3p0bm1zNW5kNDhsdHJmamd4bHhnbHgyc3Frc3E1c2c3NjdmcGxtcThscWhqamJmcXJu"
+  token: "bGRod3BudHFxZDZqa2s4cnN6N252em1mbXA1dzZ2ajJwbHhicDdmdzVyYjlkNHR4ZmpmYjQ5"
   namespace: ""
 
 ---
@@ -155,7 +155,7 @@ spec:
       volumes:
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-662dffa
+          secretName: cattle-credentials-d7a3c23
           defaultMode: 320
 
 ---
@@ -235,7 +235,7 @@ spec:
           type: DirectoryOrCreate
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-662dffa
+          secretName: cattle-credentials-d7a3c23
           defaultMode: 320
       - hostPath:
           path: /etc/docker/certs.d
